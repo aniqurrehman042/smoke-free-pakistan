@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>233740185332-4b11k9oag01ghs4lqku9agl6mp5atq14.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.233740185332-4b11k9oag01ghs4lqku9agl6mp5atq14</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>233740185332-q2reormvdc8gna73csu6m02env1arhvp.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClC_Tp6hBHdVzLcKagmhHPn0kd-vfjf5M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233740185332</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tronisys.no-smoking-app</string>
+	<key>PROJECT_ID</key>
+	<string>smoke-free-pakistan</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smoke-free-pakistan.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233740185332:ios:c1230516c69adf1bf978a1</string>
+</dict>
+</plist>
