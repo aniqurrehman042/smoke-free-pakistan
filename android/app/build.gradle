@@ -50,6 +50,15 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+    
+    signingConfigs {
+        release {
+            storeFile file('no-smoking-app-key.keystore')
+            storePassword 'nosmokingappkey'
+            keyAlias 'no-smoking-app-key'
+            keyPassword 'nosmokingappkey'
+        }
+    }
 
     buildTypes {
         release {
