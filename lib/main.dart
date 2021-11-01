@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
+      debugShowCheckedModeBanner: false,
       home: FutureBuilder(
         future: Get.find<FirebaseController>().initialization,
         builder: (context, snapshot) {
