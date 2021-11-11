@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>233740185332-4b11k9oag01ghs4lqku9agl6mp5atq14.apps.googleusercontent.com</string>
+	<string>233740185332-hkp30pc7gj1610ae8r27q69vsr58u3m5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.233740185332-4b11k9oag01ghs4lqku9agl6mp5atq14</string>
+	<string>com.googleusercontent.apps.233740185332-hkp30pc7gj1610ae8r27q69vsr58u3m5</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>233740185332-q2reormvdc8gna73csu6m02env1arhvp.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.tronisys.no-smoking-app</string>
+	<string>com.tronisys.smoke-free-pakistan-app</string>
 	<key>PROJECT_ID</key>
 	<string>smoke-free-pakistan</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:233740185332:ios:c1230516c69adf1bf978a1</string>
+	<string>1:233740185332:ios:7827798d84c9ec1ef978a1</string>
 </dict>
 </plist>
