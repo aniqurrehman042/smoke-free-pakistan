@@ -6,7 +6,8 @@ import 'package:no_smoking_app/theme/app_colors.dart';
 import 'package:no_smoking_app/theme/styles/app_text_styles.dart';
 import 'package:no_smoking_app/views/global/image_page_view_with_dot_indicator.dart';
 import 'package:no_smoking_app/views/global/rounded_bordered_text_field.dart';
-import 'package:no_smoking_app/views/pages/home_page/complaint_detail_page/complaint_detail_view_model.dart';
+
+import 'complaint_detail_view_model.dart';
 
 class ComplaintDetailPage extends StatelessWidget {
   const ComplaintDetailPage({
@@ -167,6 +168,25 @@ class ComplaintDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 48.0),
                   child: RoundedBorderedTextField(
                     controller: viewModel.complainTitleController,
+                    keyboardType: TextInputType.text,
+                    readOnly: true,
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 56.0,
+                    vertical: 12.0,
+                  ),
+                  child: Text(
+                    'Complain Status',
+                    style: AppTextStyles.darkGreenS2W7,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                  child: RoundedBorderedTextField(
+                    controller: viewModel.complainStatusController,
                     keyboardType: TextInputType.text,
                     readOnly: true,
                   ),

@@ -11,6 +11,7 @@ import 'package:no_smoking_app/views/pages/sign_in_page/sign_in_page.dart';
 import 'package:no_smoking_app/views/pages/statistics_page/statistics_page.dart';
 
 import 'fragments/complaint_type_fragment/complaint_type_fragment.dart';
+import 'fragments/violation_type_fragment/violation_type_fragment.dart';
 import 'fragments/notifications_fragment/notifications_fragment.dart';
 import 'fragments/profile_fragment/profile_fragment.dart';
 
@@ -23,6 +24,7 @@ class HomePageViewModel extends GetxController {
     const ComplaintsFragment(),
     const ProfileFragment(),
     const AddComplaintFragment(),
+    const ViolationTypeFragment(),
     const ComplaintTypeFragment(),
   ];
 

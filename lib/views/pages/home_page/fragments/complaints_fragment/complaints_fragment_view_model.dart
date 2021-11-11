@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:no_smoking_app/data/models/complaint.dart';
 import 'package:no_smoking_app/data/repositories/complaint_repository.dart';
-import 'package:no_smoking_app/views/pages/home_page/complaint_detail_page/complaint_detail_page.dart';
+import 'package:no_smoking_app/views/pages/home_page/fragments/complaint_detail_page/complaint_detail_page.dart';
 import 'package:no_smoking_app/views/pages/home_page/home_page_view_model.dart';
 import 'package:no_smoking_app/views/pages/sign_in_page/sign_in_page.dart';
 

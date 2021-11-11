@@ -1,11 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:no_smoking_app/controllers/firebase_controller.dart';
 import 'package:no_smoking_app/core/constants/app_constants.dart';
 import 'package:no_smoking_app/core/initializers/init_dependencies.dart';
 import 'package:no_smoking_app/theme/app_colors.dart';
-import 'package:no_smoking_app/views/pages/home_page/home_page.dart';
 import 'package:no_smoking_app/views/pages/splash_screen/splash_screen.dart';
 
 void main() {
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Initialize firebase
     initFirebase();
-    
+
     return GetMaterialApp(
       title: AppConstants.appName,
       theme: ThemeData(

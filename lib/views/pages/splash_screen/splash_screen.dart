@@ -17,10 +17,7 @@ class SplashScreen extends StatelessWidget {
 
     // Scroll Images List
     var scrollImages = [
-      AppAssets.logo,
-      AppAssets.logo,
-      AppAssets.logo,
-      AppAssets.logo,
+      AppAssets.splashImage
     ];
 
     // Go to Home Page after delay

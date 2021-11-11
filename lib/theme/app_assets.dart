@@ -16,4 +16,5 @@ class AppAssets {
   static const String statsPages = 'assets/img/stats_pages.png';
   static const String userComplaintForm = 'assets/img/user_complaint_form.png';
   static const String noImg = 'assets/img/no_img.png';
+  static const String splashImage = 'assets/img/splash-image.jpg';
 }

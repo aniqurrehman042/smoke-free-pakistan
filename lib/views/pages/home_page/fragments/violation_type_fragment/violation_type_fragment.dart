@@ -5,15 +5,15 @@ import 'package:no_smoking_app/theme/styles/app_text_styles.dart';
 import 'package:no_smoking_app/views/pages/home_page/fragments/add_complaint_fragment/add_complaint_fragment_view_model.dart';
 import 'package:no_smoking_app/views/pages/home_page/home_page_view_model.dart';
 
-import 'complaint_type_fragment_view_model.dart';
+import 'violation_type_fragment_view_model.dart';
 
-class ComplaintTypeFragment extends StatelessWidget {
-  const ComplaintTypeFragment({Key? key}) : super(key: key);
+class ViolationTypeFragment extends StatelessWidget {
+  const ViolationTypeFragment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     // Get View Model
-    ComplaintTypeFragmentViewModel viewModel = Get.find();
+    ViolationTypeFragmentViewModel viewModel = Get.find();
     HomePageViewModel homePageViewModel = Get.find();
     AddComplaintFragmentViewModel addComplaintFragmentViewModel = Get.find();
 
@@ -23,16 +23,18 @@ class ComplaintTypeFragment extends StatelessWidget {
           backgroundColor: Colors.white,
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'Report Violation',
                 style: AppTextStyles.blackS6W4,
               ),
-              Text(
-                'Complaint Type',
-                style: AppTextStyles.darkGrayS4W4,
+              GetBuilder<ViolationTypeFragmentViewModel>(
+                builder: (viewModel) => const Text(
+                  'Violation Type',
+                  style: AppTextStyles.darkGrayS4W4,
+                ),
               ),
-              SizedBox(height: 8.0)
+              const SizedBox(height: 8.0)
             ],
           ),
           leading: IconButton(
@@ -61,7 +63,6 @@ class ComplaintTypeFragment extends StatelessWidget {
                     viewModel.complaintTypes![index],
                     homePageViewModel,
                     addComplaintFragmentViewModel,
-                    index
                   ),
                   padding: const EdgeInsets.all(8.0),
                   child: Column(

@@ -10,6 +10,7 @@ import 'package:no_smoking_app/data/models/lat_lng.dart';
 import 'package:no_smoking_app/data/repositories/complaint_repository.dart';
 import 'package:no_smoking_app/data/repositories/local_repository.dart';
 import 'package:no_smoking_app/data/repositories/storage_repository.dart';
+import 'package:no_smoking_app/theme/styles/app_text_styles.dart';
 import 'package:no_smoking_app/utils/snack_bar_utils.dart';
 import 'package:no_smoking_app/views/global/rounded_button.dart';
 import 'package:no_smoking_app/views/pages/home_page/home_page_view_model.dart';
@@ -45,6 +46,7 @@ class AddComplaintFragmentViewModel extends GetxController {
     XFile(''),
   ];
 
+  String _violationType = '';
   String _complaintType = '';
   int secondsSinceAuthChange = 0;
 
@@ -58,6 +60,10 @@ class AddComplaintFragmentViewModel extends GetxController {
         });
       }
     });
+  }
+
+  set violationType(String value) {
+    _violationType = value;
   }
 
   set complaintType(String value) {
@@ -117,8 +123,10 @@ class AddComplaintFragmentViewModel extends GetxController {
             department: _departmentController.text,
             designation: _designationController.text,
             title: _complainTitleController.text,
+            status: 'Pending',
             date: Timestamp.now(),
             description: _complainDescriptionController.text,
+            violationType: _violationType,
             complaintType: _complaintType,
             imageUrls: imageNames,
             location: LatLng(
@@ -144,6 +152,28 @@ class AddComplaintFragmentViewModel extends GetxController {
           title: 'Complain Registration Successful',
           message: 'The complain has been registered successfully.',
         );
+        if (_complaintType.contains('Common Citizen')) {
+          Get.dialog(
+            AlertDialog(
+              title: const Text(
+                'Complain Registration Successful',
+                style: AppTextStyles.blackS4W4,
+              ),
+              content: const Text(
+                'Thank you. The complain has been successfully registered.',
+                style: AppTextStyles.blackS3W4,
+              ),
+              actions: [
+                RoundedButton(
+                  text: 'OK',
+                  isMini: true,
+                  onTap: () => Get.back(),
+                  isCircular: false,
+                )
+              ],
+            ),
+          );
+        }
       }
     } else {
       SnackBarUtils.showShortSnackBar(

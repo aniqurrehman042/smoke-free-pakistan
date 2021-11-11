@@ -4,14 +4,22 @@ import 'package:no_smoking_app/theme/app_assets.dart';
 import 'package:no_smoking_app/views/pages/home_page/fragments/add_complaint_fragment/add_complaint_fragment_view_model.dart';
 import 'package:no_smoking_app/views/pages/home_page/home_page_view_model.dart';
 
-class ComplaintTypeFragmentViewModel extends GetxController {
+class ViolationTypeFragmentViewModel extends GetxController {
   final List<ComplaintType>? _complaintTypes = [
     ComplaintType(
-      name: 'Authorized Officer\nسرکاری افسر',
+      name: 'Violation at Public Place',
       imgUrl: AppAssets.noImg,
     ),
     ComplaintType(
-      name: 'Common Citizen\nعام شہری',
+      name: 'No Smoking sign boards are not displayed',
+      imgUrl: AppAssets.noImg,
+    ),
+    ComplaintType(
+      name: 'Sale or Retailership',
+      imgUrl: AppAssets.noImg,
+    ),
+    ComplaintType(
+      name: 'Violation at Private Place',
       imgUrl: AppAssets.noImg,
     ),
   ];
@@ -23,17 +31,12 @@ class ComplaintTypeFragmentViewModel extends GetxController {
   }
 
   void goToAddComplaintPage(
-      ComplaintType complaintType,
-      HomePageViewModel homePageViewModel,
-      AddComplaintFragmentViewModel addComplaintFragmentViewModel,
-      int index
-      ) {
+    ComplaintType complaintType,
+    HomePageViewModel homePageViewModel,
+    AddComplaintFragmentViewModel addComplaintFragmentViewModel,
+  ) {
     Get.back();
-    addComplaintFragmentViewModel.complaintType = complaintType.name;
-    if (index == 0) {
-      homePageViewModel.currentFragmentIndex = 5;
-    } else {
-      homePageViewModel.currentFragmentIndex = 6;
-    }
+    addComplaintFragmentViewModel.violationType = complaintType.name;
+    homePageViewModel.currentFragmentIndex = 5;
   }
 }

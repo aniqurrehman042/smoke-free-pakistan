@@ -21,7 +21,7 @@ class AddComplaintBottomSheet extends StatelessWidget {
           text: 'Add Complaint',
           onPressed: () {
             Get.back();
-            homePageViewModel.currentFragmentIndex = 5;
+            homePageViewModel.currentFragmentIndex = 7;
           },
         ),
         if (FirebaseAuth.instance.currentUser == null)

@@ -10,7 +10,9 @@ class Complaint {
   String phone;
   String title;
   String description;
+  String? violationType;
   String? complaintType;
+  String? status;
   Timestamp date;
   List<String> imageUrls;
   LatLng? location;
@@ -23,7 +25,9 @@ class Complaint {
     required this.phone,
     required this.title,
     required this.description,
+    this.violationType,
     this.complaintType,
+    this.status,
     required this.date,
     required this.imageUrls,
     this.location,
@@ -37,10 +41,13 @@ class Complaint {
         phone: json['phone'],
         title: json['title'],
         description: json['description'],
+        violationType: json['violationType'],
         complaintType: json['complaintType'],
+        status: json['status'],
         date: json['date'],
         imageUrls: [for (var imageUrl in json['imageUrls']) imageUrl],
-        location: json['location'] != null ? LatLng.fromJson(json['location']) : null,
+        location:
+            json['location'] != null ? LatLng.fromJson(json['location']) : null,
       );
 
   Map<String, dynamic> toJson() => {
@@ -51,7 +58,9 @@ class Complaint {
         'phone': phone,
         'title': title,
         'description': description,
+        'violationType': violationType,
         'complaintType': complaintType,
+        'status': status,
         'date': date,
         'imageUrls': imageUrls,
         'location': location != null ? location!.toJson() : null,
