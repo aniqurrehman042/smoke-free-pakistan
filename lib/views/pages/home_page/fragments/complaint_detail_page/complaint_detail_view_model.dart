@@ -13,6 +13,8 @@ class ComplaintDetailViewModel extends GetxController {
       TextEditingController();
   final TextEditingController _complainStatusController =
       TextEditingController();
+  final TextEditingController _violationTypeController =
+      TextEditingController();
   final TextEditingController _complainDescriptionController =
       TextEditingController();
 
@@ -30,6 +32,8 @@ class ComplaintDetailViewModel extends GetxController {
 
   TextEditingController get complainStatusController => _complainStatusController;
 
+  TextEditingController get violationTypeController => _violationTypeController;
+
   TextEditingController get complainDescriptionController =>
       _complainDescriptionController;
 
@@ -45,6 +49,7 @@ class ComplaintDetailViewModel extends GetxController {
     _designationController.text = complaint.designation;
     _complainTitleController.text = complaint.title;
     _complainStatusController.text = complaint.status ?? 'Pending';
+    _violationTypeController.text = complaint.violationType ?? 'N/A';
     _complainDescriptionController.text = complaint.description;
   }
 }

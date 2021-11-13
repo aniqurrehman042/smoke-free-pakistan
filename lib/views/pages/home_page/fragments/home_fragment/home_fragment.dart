@@ -209,7 +209,7 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ]),
                   child: Image.asset(
-                    AppAssets.noImg,
+                    AppAssets.icNoSmoking,
                   ),
                 ),
               ),
@@ -224,7 +224,7 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ]),
                   child: Image.asset(
-                    AppAssets.noImg,
+                    AppAssets.icNoCigarettes,
                   ),
                 ),
               ),
@@ -239,7 +239,7 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ]),
                   child: Image.asset(
-                    AppAssets.noImg,
+                    AppAssets.icSmokingDamagesLungs,
                   ),
                 ),
               ),
@@ -254,7 +254,7 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ]),
                   child: Image.asset(
-                    AppAssets.noImg,
+                    AppAssets.icSmokingHazards,
                   ),
                 ),
               ),

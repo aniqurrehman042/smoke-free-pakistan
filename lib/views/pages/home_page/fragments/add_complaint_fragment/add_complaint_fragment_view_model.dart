@@ -68,6 +68,7 @@ class AddComplaintFragmentViewModel extends GetxController {
 
   set complaintType(String value) {
     _complaintType = value;
+    update();
   }
 
   bool _loading = false;
@@ -86,6 +87,8 @@ class AddComplaintFragmentViewModel extends GetxController {
 
   TextEditingController get complainDescriptionController =>
       _complainDescriptionController;
+
+  String get complaintType => _complaintType;
 
   List<XFile> get images => _images;
 
@@ -186,20 +189,21 @@ class AddComplaintFragmentViewModel extends GetxController {
 
   bool validateForm() {
     var isLoggedIn = FirebaseAuth.instance.currentUser != null;
+    var isCitizen = _complaintType.contains('Common Citizen');
     var isValid = true;
-    if (_emailController.text.isEmpty && !isLoggedIn) {
+    if (_emailController.text.isEmpty && !isCitizen) {
       isValid = false;
     }
-    if (_fullNameController.text.isEmpty && !isLoggedIn) {
+    if (_fullNameController.text.isEmpty && !isCitizen) {
       isValid = false;
     }
-    if (_departmentController.text.isEmpty && !isLoggedIn) {
+    if (_departmentController.text.isEmpty && !isCitizen) {
       isValid = false;
     }
-    if (_designationController.text.isEmpty && !isLoggedIn) {
+    if (_designationController.text.isEmpty && !isCitizen) {
       isValid = false;
     }
-    if (_phoneNoController.text.isEmpty && !isLoggedIn) {
+    if (_phoneNoController.text.isEmpty && !isCitizen) {
       isValid = false;
     }
     if (_complainTitleController.text.isEmpty) {

@@ -8,19 +8,27 @@ class ViolationTypeFragmentViewModel extends GetxController {
   final List<ComplaintType>? _complaintTypes = [
     ComplaintType(
       name: 'Violation at Public Place',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icPublicPlaceViolation,
     ),
     ComplaintType(
       name: 'No Smoking sign boards are not displayed',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icNoSmokingSign,
     ),
     ComplaintType(
       name: 'Sale or Retailership',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icSaleOrRetailership,
     ),
     ComplaintType(
       name: 'Violation at Private Place',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icSmokingPerson,
+    ),
+    ComplaintType(
+      name: 'Violation by Common Citizen',
+      imgUrl: AppAssets.icBusinessMan,
+    ),
+    ComplaintType(
+      name: 'Violation by Student',
+      imgUrl: AppAssets.icStudent,
     ),
   ];
 

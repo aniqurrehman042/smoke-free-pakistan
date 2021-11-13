@@ -52,7 +52,7 @@ class ViolationTypeFragment extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.72,
+                childAspectRatio: 0.68,
               ),
               itemCount: viewModel.complaintTypes?.length ?? 0,
               itemBuilder: (context, index) => Padding(
@@ -83,7 +83,7 @@ class ViolationTypeFragment extends StatelessWidget {
                       Text(
                         viewModel.complaintTypes![index].name,
                         style: AppTextStyles.whiteS3W4,
-                        maxLines: 1,
+                        maxLines: 4,
                       ),
                     ],
                   ),

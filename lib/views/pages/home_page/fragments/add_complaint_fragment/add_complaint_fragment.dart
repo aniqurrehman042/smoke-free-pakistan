@@ -28,6 +28,9 @@ class AddComplaintFragment extends StatelessWidget {
     AddComplaintFragmentViewModel viewModel = Get.find();
     HomePageViewModel homePageViewModel = Get.find();
 
+    // Check if citizen
+    var isCitizen = viewModel.complaintType.contains('Common Citizen');
+
     return Stack(
       children: [
         Column(
@@ -50,18 +53,19 @@ class AddComplaintFragment extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 32.0),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 56.0,
                         vertical: 12.0,
                       ),
                       child: Text(
-                        'Full Name',
+                        'Full Name${isCitizen ? ' (optional)' : ''}',
                         style: AppTextStyles.darkGreenS2W7,
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                      padding:
+                      const EdgeInsets.symmetric(horizontal: 48.0),
                       child: RoundedBorderedTextField(
                         hint: 'Your Full Name',
                         controller: viewModel.fullNameController,
@@ -70,84 +74,91 @@ class AddComplaintFragment extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 16.0),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 56.0,
                         vertical: 12.0,
                       ),
                       child: Text(
-                        'Department',
+                        'Phone Number${isCitizen ? ' (optional)' : ''}',
                         style: AppTextStyles.darkGreenS2W7,
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                      child: RoundedBorderedTextField(
-                        hint: 'Name of Your Department',
-                        controller: viewModel.departmentController,
-                        keyboardType: TextInputType.text,
-                        textCapitalization: TextCapitalization.words,
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 56.0,
-                        vertical: 12.0,
-                      ),
-                      child: Text(
-                        'Designation',
-                        style: AppTextStyles.darkGreenS2W7,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                      child: RoundedBorderedTextField(
-                        hint: 'Your Designation',
-                        controller: viewModel.designationController,
-                        keyboardType: TextInputType.text,
-                        textCapitalization: TextCapitalization.words,
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 56.0,
-                        vertical: 12.0,
-                      ),
-                      child: Text(
-                        'Email ID',
-                        style: AppTextStyles.darkGreenS2W7,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                      child: RoundedBorderedTextField(
-                        hint: 'Enter Your Email Address',
-                        controller: viewModel.emailController,
-                        keyboardType: TextInputType.emailAddress,
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 56.0,
-                        vertical: 12.0,
-                      ),
-                      child: Text(
-                        'Phone Number',
-                        style: AppTextStyles.darkGreenS2W7,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                      padding:
+                      const EdgeInsets.symmetric(horizontal: 48.0),
                       child: RoundedBorderedTextField(
                         hint: 'Your Phone Number',
                         controller: viewModel.phoneNoController,
                         keyboardType: TextInputType.phone,
                       ),
                     ),
-                    const SizedBox(height: 8.0),
+                    const SizedBox(height: 16.0),
+                    if (!isCitizen)
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 56.0,
+                              vertical: 12.0,
+                            ),
+                            child: Text(
+                              'Department',
+                              style: AppTextStyles.darkGreenS2W7,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                            child: RoundedBorderedTextField(
+                              hint: 'Name of Your Department',
+                              controller: viewModel.departmentController,
+                              keyboardType: TextInputType.text,
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                          ),
+                          const SizedBox(height: 16.0),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 56.0,
+                              vertical: 12.0,
+                            ),
+                            child: Text(
+                              'Designation',
+                              style: AppTextStyles.darkGreenS2W7,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                            child: RoundedBorderedTextField(
+                              hint: 'Your Designation',
+                              controller: viewModel.designationController,
+                              keyboardType: TextInputType.text,
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                          ),
+                          const SizedBox(height: 16.0),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 56.0,
+                              vertical: 12.0,
+                            ),
+                            child: Text(
+                              'Email ID',
+                              style: AppTextStyles.darkGreenS2W7,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                            child: RoundedBorderedTextField(
+                              hint: 'Enter Your Email Address',
+                              controller: viewModel.emailController,
+                              keyboardType: TextInputType.emailAddress,
+                            ),
+                          ),
+                          const SizedBox(height: 8.0),
+                        ],
+                      ),
                     const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 56.0,

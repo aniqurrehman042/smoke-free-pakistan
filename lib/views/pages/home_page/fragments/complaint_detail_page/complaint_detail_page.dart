@@ -179,6 +179,25 @@ class ComplaintDetailPage extends StatelessWidget {
                     vertical: 12.0,
                   ),
                   child: Text(
+                    'Violation Type',
+                    style: AppTextStyles.darkGreenS2W7,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                  child: RoundedBorderedTextField(
+                    controller: viewModel.violationTypeController,
+                    keyboardType: TextInputType.text,
+                    readOnly: true,
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 56.0,
+                    vertical: 12.0,
+                  ),
+                  child: Text(
                     'Complain Status',
                     style: AppTextStyles.darkGreenS2W7,
                   ),
