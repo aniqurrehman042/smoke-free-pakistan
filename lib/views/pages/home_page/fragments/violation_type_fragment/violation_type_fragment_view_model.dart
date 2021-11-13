@@ -22,14 +22,6 @@ class ViolationTypeFragmentViewModel extends GetxController {
       name: 'Violation at Private Place',
       imgUrl: AppAssets.icSmokingPerson,
     ),
-    ComplaintType(
-      name: 'Violation by Common Citizen',
-      imgUrl: AppAssets.icBusinessMan,
-    ),
-    ComplaintType(
-      name: 'Violation by Student',
-      imgUrl: AppAssets.icStudent,
-    ),
   ];
 
   List<ComplaintType>? get complaintTypes => _complaintTypes;

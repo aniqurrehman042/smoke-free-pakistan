@@ -8,11 +8,11 @@ class ComplaintTypeFragmentViewModel extends GetxController {
   final List<ComplaintType>? _complaintTypes = [
     ComplaintType(
       name: 'Authorized Officer\nسرکاری افسر',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icBusinessMan,
     ),
     ComplaintType(
       name: 'Common Citizen\nعام شہری',
-      imgUrl: AppAssets.noImg,
+      imgUrl: AppAssets.icStudent,
     ),
   ];
 
