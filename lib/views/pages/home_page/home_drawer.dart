@@ -21,20 +21,6 @@ class HomeDrawer extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              // const SizedBox(
-              //   height: 280.0,
-              //   child: DrawerHeader(
-              //     padding: EdgeInsets.zero,
-              //     margin: EdgeInsets.zero,
-              //     decoration: BoxDecoration(
-              //       image: DecorationImage(
-              //         image: AssetImage(AppAssets.logo),
-              //         fit: BoxFit.cover,
-              //       ),
-              //     ),
-              //     child: SizedBox(),
-              //   ),
-              // ),
               Ink(
                 color: AppColors.darkGreen,
                 child: ListTile(
